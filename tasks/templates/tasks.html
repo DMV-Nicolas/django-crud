@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+<h1>Tasks</h1>
+<ul style="display: grid; grid-template-columns: 1fr 1fr;gap: 20px;list-style: none;">
+    {% for task in tasks %}
+    <li>
+        <article class="card" style="margin-bottom: 20px;">
+            <div class="card-header">
+                <h2>{{task.title}}</h2>
+            </div>
+            <div class="card-body">
+                {% if task.completed_at %}
+                <h5 class="card-title">Completed! ✅</h5>
+                {% else %}
+                <h5 class="card-title">Incomplete ❌</h5>
+                {% endif %}
+                <p class="card-text">{{task.description}}</p>
+                <a href="{% url 'task_details' id=task.id %}" class="btn btn-primary">Details</a>
+            </div>
+        </article>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

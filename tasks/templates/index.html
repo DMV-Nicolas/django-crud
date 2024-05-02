@@ -1,0 +1,26 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+<div class="card">
+    <img src="{% static 'cats.png' %}" class="card-img-top" alt="cats artwork"
+        style="height: 300px; object-fit: cover;">
+    <div class="card-body">
+        <h1 class="card-title">Home</h1>
+        <p class="card-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, quaerat veniam. Dicta modi suscipit
+            sequi quos totam, officiis dolor reiciendis qui adipisci ut ratione nesciunt, culpa ipsum voluptate id
+            debitis aut ipsa autem at ducimus? Totam porro fugit praesentium quo corrupti quibusdam laborum voluptatibus
+            nemo, est ducimus similique quis, amet aspernatur itaque debitis delectus assumenda repudiandae? Quae maxime
+            accusantium ratione maiores accusamus dolorem. Optio, necessitatibus distinctio doloribus itaque
+            perspiciatis possimus voluptatem at, voluptatibus laboriosam nulla harum rerum commodi animi, quo officiis
+            quaerat eaque dolorum! Nulla harum similique eligendi assumenda dolorem labore quia accusantium aliquam,
+            tenetur eius? Corrupti, laborum enim id laudantium tenetur quaerat nihil magnam, porro nam nostrum, nisi
+            fuga. Amet facilis vero aperiam libero, suscipit esse, repudiandae architecto a labore molestiae sapiente
+            quia quaerat tenetur necessitatibus reiciendis quisquam atque repellendus et accusamus. Libero eos, a esse
+            doloremque beatae nostrum suscipit voluptatibus repudiandae quo illo ullam enim, maiores atque asperiores!
+        </p>
+        <a href="{% url 'signup' %}" class="btn btn-primary">Sign up</a>
+        <a href="{% url 'signin' %}" class="btn btn-primary">Log in</a>
+    </div>
+</div>
+{% endblock %}
